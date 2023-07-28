@@ -1,0 +1,1 @@
+{"version":1,"defects":{"TestTextLevel::testOnlyString":7,"TestTextLevel::testWord":7,"TestTextLevel::testSentence":7,"TestTextLevel::testSyllable":7,"TestTextLevel::testLevel":8},"times":{"TestTextLevel::testOnlyString":0.003,"TestTextLevel::testWord":0,"TestTextLevel::testSentence":0,"TestTextLevel::testSyllable":0.001,"TestTextLevel::testLevel":0}}
