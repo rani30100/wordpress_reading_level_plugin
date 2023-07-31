@@ -36,7 +36,23 @@ class TextLevel
         
         $result = 206.835 - (1.015 * ($nbWords / $nbSentence)) - (84.6 * ($nbSyllables / $nbWords));
 
-        update_post_meta( $post_id, 'reading_level', ceil($result) );        
+        if($result <= 30) {
+            $result = 'Niveau universitaire';
+        } else if ($result > 30.01 && $result <= 50) {
+            $result = 'Niveau grande école';
+        } else if ($result > 50.01 && $result <= 60) {
+            $result = 'Niveau seconde / Terminale';
+        } else if ($result > 60.01 && $result <= 70) {
+            $result = 'Niveau 4eme et 3eme';
+        } else if ($result > 70.01 && $result <= 80) {
+            $result = 'Niveau 5eme';
+        } else if ($result > 80.01 && $result <= 90) {
+            $result = 'Niveau 6eme';
+        } else if ($result > 90.01) {
+            $result = 'Niveau école primaire';
+        }
+
+        update_post_meta( $post_id, 'reading_level', $result );        
     }
     
     
@@ -51,5 +67,4 @@ class TextLevel
         
         return $title;
     }
-
 }
