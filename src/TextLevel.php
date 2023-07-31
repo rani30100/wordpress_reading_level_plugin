@@ -23,7 +23,6 @@ class TextLevel
         if ( $post->post_type !== 'post' ) { return; }
 
         $textContent = strip_tags($post->post_content);
-
         
         if(is_string($textContent) == false) {
             return false;
